@@ -1,6 +1,6 @@
 {
   "name": "Dice Roller",
-  "description": "An awesome Firefox OS app",
+  "description": "Dice Roller app for Firefox OS",
   "launch_path": "/index.html",
   "icons": {
     "60": "/app/icons/60.png",
@@ -9,7 +9,7 @@
   },
   "developer": {
     "name": "belen-albeza",
-    "url": "https://github.com/belen-albeza"
+    "url": "https://github.com/belen-albeza/diceroller"
   },
   "default_locale": "en"
 }
