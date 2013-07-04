@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+.tmp
+build
+application.zip
+app/components
+!app/components/zepto/zepto.min.js
+

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <title>Dice Roller</title>
+  <meta charset="utf-8">
+  <link href="/styles/main.css" rel="stylesheet" type="text/css">
+  <script src="/components/zepto/zepto.min.js"></script>
+  <script defer src="/scripts/main.js"></script>
+</head>
+<body>
+  <article class="roller">
+    <header>
+      <h1>Dice Roller</h1>
+    </header>
+    <div class="board">
+      <div class="dice">
+        <div class="die n1 f20">20</div>
+        <button class="faces inc">+</button>
+        <button class="faces dec">-</button>
+        <button class="amount inc">+</button>
+        <button class="amount dec" disabled>-</button>
+      </div>
+      <footer class="result">
+        <ul class="partials">
+          <li>?</li>
+        </ul>
+      </footer>
+    </div><!-- board -->
+    <form action="#" class="roll">
+      <p>
+        <input type="submit" value="Roll 1d20">
+      </p>
+    </form>
+  </article>
+</body>
+</html>
+

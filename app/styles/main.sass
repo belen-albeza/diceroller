@@ -1,0 +1,147 @@
+@import _reset
+@import _peakfix
+
+@mixin clearfix
+  overflow: hidden
+
+html
+  font-size: 62.5%
+
+body
+  font-family: MozTT, sans-serif
+  color: #fff
+  background: #222
+
+article
+  & > header
+    background: #000
+    margin-bottom: 1rem
+    h1
+      margin-left: 2rem
+      font-size: 2.5rem
+      line-height: 5rem
+
+footer.result
+  height: 7rem
+  overflow: hidden
+  ul.partials.rolling
+    transition: margin-top 1s ease-out
+  ul.partials li
+    text-align: center
+    display: block
+    line-height: 7rem
+    font-size: 6rem
+    vertical-align: middle
+    color: #666
+    &:last-child
+      color: #fff
+
+form.roll
+  position: absolute
+  bottom: 2rem
+  left: 2rem
+  right: 2rem
+  input[type=submit]
+    width: 100%
+    display: inline-block
+    background: #ccc
+    border-radius: 0.8rem
+    box-sizing: border-box
+    color: #000
+    padding: 1rem 2rem
+    text-align: center
+    border: none
+    font-size: 2rem
+    &:active
+      background: #eee
+
+div.dice
+  +clearfix
+  height: 20rem
+  position: relative
+  overflow: visible
+  button
+    &::-moz-focus-inner
+      border: 0
+    &:disabled
+      opacity: 0.5
+    position: absolute
+    background: #666
+    display: block
+    width: 4rem
+    border: none
+    font-weight: bold
+    font-size: 2rem
+    border-radius: 2rem
+    line-height: 4rem
+    padding: 0
+    -moz-appearance: none !important
+    -webkit-appearance: none !important
+    vertical-align: middle
+    &:not(:disabled):active
+      background: #ccc
+      transform: scale(1.25)
+    &.inc
+      top: 4rem
+    &.dec
+      bottom: 4rem
+    &.faces
+      right: -4rem
+    &.amount
+      left: -4rem
+
+div.die
+  margin: 0 auto
+  font-size: 4rem
+  text-align: center
+  background-image: url(/images/1d4.svg)
+  background-position: center center
+  background-repeat: none
+  float: left
+  vertical-align: middle
+  &.f6
+    background-image: url(/images/1d6.svg)
+  &.f8
+    background-image: url(/images/1d8.svg)
+  &.f10
+    background-image: url(/images/1d10.svg)
+  &.f20
+    background-image: url(/images/1d20.svg)
+  &.f100
+    background-image: url(/images/1d100.svg)
+  &.n1
+    width: 20rem
+    height: 20rem
+    line-height: 20rem
+    background-size: 20rem 20rem
+    font-size: 6rem
+  &.n2, &.n3, &.n4
+    line-height: 10rem
+    margin-top: 5rem
+    width: 10rem
+    height: 10rem
+    background-size: 10rem 10rem
+    background-position: left center
+    background-repeat: repeat-x
+  &.n3, &.n4
+    margin: 0
+  &.n3:nth-child(3)
+    margin-left: 5rem
+  &.n5, &.n6
+    background-size: 6.6rem 6.6rem
+    width: 6.66rem
+    height: 6.66rem
+    line-height: 6.66rem
+    font-size: 2rem
+    margin-top: 3.4rem
+    &:nth-child(4), &:nth-child(5), &:nth-child(6)
+      margin-top: 0
+    &:nth-child(5)
+      margin-top: 0
+  &.n5:nth-child(4)
+    margin-left: 3.4
+
+div.board
+  width: 20rem
+  margin: 0 auto
+
